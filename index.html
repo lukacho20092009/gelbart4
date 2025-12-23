@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artist Portfolio & Shop</title>
+<link rel="icon" href="imgs/logo.svg" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+<!-- https://statcounter.com/sign-up/project/?plan=basic -->
+  <div class="burger" id="burger">
+    <div></div><div></div><div></div>
+  </div>
+
+<nav id="nav">
+  <a href="#home" data-i18n="nav.home" class="active">Home</a>
+  <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+  <a href="#order" data-i18n="nav.order">Order</a>
+  <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+
+</nav>
+
+  <div class="logo-lang">
+    <div class="lang-selector">
+      <span>English</span>
+      <div class="lang-popup" id="lang-popup">
+        <button data-lang="en"> English</button>
+        <button data-lang="ka">🇬🇪 ქართული</button>
+        <button data-lang="es">🇪🇸 Español</button>
+        <button data-lang="ru">🇷🇺 Русский</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section class="hero" id="home">
+    <video autoplay muted loop playsinline class="hero-video hero-video-desktop">
+        <source src="imgs/enhancedvid.mp4" type="video/mp4">
+    </video>
+
+    <video autoplay muted loop playsinline class="hero-video hero-video-mobile">
+        <source src="enhanced2.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-text">
+        <h1 data-i18n="hero.title"> David Gelbakhiani Arts</h1>
+        <p data-i18n="hero.subtitle">Our life may not be long, but our works will endure for centuries.</p>
+ <img class="signature" src="https://res.cloudinary.com/dri8nh3tr/image/upload/v1766493486/598693465_2727651744240467_4403204035008622654_n-removebg-preview_m8akt7.png" alt="">
+<div class="href">
+      <a href="#gallery" class="cta-btn" data-i18n="hero.cta">View Gallery</a>
+    <a href="#contact" class="cta-btn" data-i18n="hero.atc">Contact</a>
+</div>
+
+  </div>
+
+<div class="container">
+  <a href="#gallery" class="card-link">
+    <div class="card">
+      <div class="card-image">
+        <img src="imgs/1.jpg" alt="">
+      </div>
+      <div class="card-content">
+        <h3 data-i18n="card.gallery"></h3>
+      </div>
+    </div>
+  </a>
+
+  <a href="#order" class="card-link">
+    <div class="card">
+      <div class="card-image">
+        <img src="https://res.cloudinary.com/dri8nh3tr/image/upload/v1766507300/555_z3oo0k.jpg" alt="">
+      </div>
+      <div class="card-content">
+        <h3 data-i18n="card.print-pictures"></h3>
+      </div>
+    </div>
+  </a>
+
+  <a href="#cloth-gallery" class="card-link">
+    <div class="card">
+      <div class="card-image">
+        <img src="imgs/first-imgs/a1.png" alt="">
+      </div>
+      <div class="card-content">
+        <h3 data-i18n="card.print-clothes"></h3>
+      </div>
+    </div>
+  </a>
+
+  <a href="#about" class="card-link">
+    <div class="card">
+      <div class="card-image">
+        <img src="imgs/artist-img.jpg" alt="">
+      </div>
+      <div class="card-content">
+        <h3 data-i18n="card.about"></h3>
+      </div>
+    </div>
+  </a>
+</div>
+
+<br><br><br><br>
+</section>
+
+<br>
+<section id="gallery">
+  <h2 class="gallery-title" data-i18n="nav.gallery">Gallery</h2>
+  <div class="gallery" id="gallery-list">
+    </div>
+</section>
+
+<br>
+
+<section id="cloth-gallery">
+  <h2 class="gallery-title cloth" data-i18n="nav.print-on-cloth">Print on Cloth</h2>
+  <br>
+<br>
+<div class="img-box">
+  <a href="https://brandinghubusa.com/collections/all?page=2">
+    <img src="imgs/first-imgs/a1.png" alt="">
+    <br>
+    <img src="imgs/pr.jpg" alt="">
+  </a>
+</div>
+</section>
+
+<section class="order-section" id="order">
+  <h2 class="order-title" data-i18n="order.title">
+    Order by Size
+  </h2>
+
+  <div class="order-card">
+    <div class="preview">
+      <img
+        src="https://res.cloudinary.com/dri8nh3tr/image/upload/v1766509347/598739093_1478318947296426_6083794534970014736_n_n6uwuq.jpg"
+        alt="Painting preview"
+        id="paintingPreview"
+      >
+
+    </div>
+
+    <div class="controls">
+      <h3 data-i18n="order.customize">
+        Customize Your Painting
+      </h3>
+
+      <div class="size-control">
+        <button id="decreaseSize">−</button>
+<input
+  type="text"
+  id="sizeNumber"
+  value="12 × 8"
+/>
+
+        <button id="increaseSize">+</button>
+      </div>
+
+      <div class="unit-toggle">
+        <span data-i18n="order.unit">Unit:</span>
+        <select id="unitSelect">
+          <option value="in">Inch</option>
+          <option value="cm">cm</option>
+        </select>
+      </div>
+
+      <div class="info-box">
+        <div>
+          <span data-i18n="order.size">Size:</span>
+          <strong>
+            <span id="widthValue">12</span> ×
+            <span id="heightValue">8</span>
+            <span id="unitLabel">In</span>
+          </strong>
+        </div>
+
+        <div>
+          <span data-i18n="order.resolution">Resolution:</span>
+          <strong>
+            <span id="resValue">3600 × 2400</span> px
+          </strong>
+        </div>
+
+        <div class="price">
+          <span data-i18n="order.price">Price:</span>
+          <strong>
+            $<span id="priceValue">152</span>
+          </strong>
+        </div>
+      </div>
+
+      <p>
+        <span data-i18n="order.note-signature">
+          Each painting will include the artist's original signature.
+        </span>
+        <br>
+        <span data-i18n="order.note-custom-size">
+          If you would like different sizes, please contact us.
+        </span>
+      </p>
+
+      <button class="order-btn" data-i18n="order.button">
+        Contact to Order
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<br>
+
+<section class="about" id="about">
+  <div class="about-wrapper">
+    <div class="about-image">
+      <img src="imgs/about.jpg" alt="Artist Portrait">
+    </div>
+    
+<div class="about-text">
+  <h2 data-i18n="nav.about">About the Artist</h2>
+<p id="about-text" data-i18n="about.text">
+  </p>
+
+  <div class="gap">
+    <a href="#gallery" class="about-btn" data-i18n="about.gallery">Explore Gallery</a>
+    <a href="https://www.facebook.com/100066798437526/reels/?_rdr" class="about-btn" data-i18n="about.videos">Artist’s work videos</a>
+  </div>
+</div>
+  
+  <br>
+</section>
+
+<section class="contact-section" id="contact">
+<div class="contact-info">
+  <h2 data-i18n="contact.title">Contact Us</h2>
+
+  <div class="info-item">
+    <i class="icon-phone">📞</i>
+    <span data-i18n="contact.phone">Phone:</span>
+    <a href="tel:+17328958061">+1 732 895 8061</a>
+  </div>
+
+  <p data-i18n="contact.message-note">
+    Please message us on the phone number,
+    as we may not always be able to
+    answer calls. If you're interested, just send us a message.
+  </p>
+
+  <div class="info-item">
+    <i class="icon-email">📧</i>
+    <span data-i18n="contact.email">Email:</span>
+    <span>
+      d.gelbakhiani@proton.me <br>
+      <a
+        href="https://mail.google.com/mail/?view=cm&to=d.gelbakhiani@proton.me"
+        target="_blank"
+        data-i18n="contact.write-email"
+      >
+        Write the Email
+      </a>
+    </span>
+  </div>
+
+  <div class="info-item">
+    <i class="icon-location">📍</i>
+    <span data-i18n="contact.location">Location:</span>
+    <span>58 E Midland Ave, Paramus, NJ, USA</span>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/profile.php?id=100066798437526" target="_blank" aria-label="Facebook">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+    </a>
+
+    <a href="https://www.instagram.com/gelbakh/" target="_blank" aria-label="Instagram">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="your-script.js"></script>
+</body>
+</html>
